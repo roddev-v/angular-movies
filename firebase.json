@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "angular-movies",
+      "public": "dist/angular-movies",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

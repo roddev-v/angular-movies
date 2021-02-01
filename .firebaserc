@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-telacad-mo": {
+      "hosting": {
+        "angular-movies": [
+          "angular-telacad-mo"
+        ]
+      }
+    }
+  }
+}

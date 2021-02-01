@@ -1,0 +1,12 @@
+<div class="card">
+  <img class="card-img-top" [src]="movie.medium_cover_image" alt="Card image cap">
+  <div class="card-body">
+    <div style="flex: 1" class="mb-1">
+      <h5 class="card-title">{{movie.title}}</h5>
+      <p class="card-text">{{movie.description_full.slice(0, 80) + '...'}}</p>
+    </div>
+
+    <div>{{movie.rating}}</div>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>

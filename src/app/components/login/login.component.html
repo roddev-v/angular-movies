@@ -1,0 +1,43 @@
+<div class="login-container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col offset-sm-3 col-sm-6 col-md-6 offset-md-3 col-lg-4 offset-lg-4 col-xl-4 offset-xl-">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="input-group mb-2">
+            <input type="text"
+                   class="form-control"
+                   formControlName="username"
+                   placeholder="Username"
+                   aria-label="Username">
+          </div>
+          <div class="input-group mb-2">
+            <input type="password"
+                   class="form-control"
+                   formControlName="password"
+                   placeholder="Password"
+                   aria-label="Password">
+          </div>
+
+          <div class="input-group mb-2" *ngIf="!isLogInMode">
+            <input type="password"
+                   class="form-control"
+                   formControlName="confirmPassword"
+                   placeholder="Confirm password"
+                   aria-label="Confirm password">
+          </div>
+          <button [disabled]="form.invalid" type="submit" style="width: 100%"
+                  class="btn btn-primary">{{isLogInMode ? 'Log in' : 'Sign up'}}</button>
+          <hr>
+          <div [style.fontSize]="'12px'" class="text-center">
+            {{isLogInMode ? "Don't have an account?" : "Already have an account?"}}
+            <span [style.cursor]="'pointer'"
+                  class="text-primary"
+                  (click)="toggleMode()">
+            {{isLogInMode ? "Let's create one" : "Log in"}}
+          </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
